@@ -18,9 +18,11 @@
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pramojan Enterprises-${title}</title>
 
@@ -36,9 +38,11 @@
 
 
 <!-- Custom CSS -->
-<link href="${css}/myapp.css" rel="stylesheet">
+<!--link href="${css}/myapp.css" rel="stylesheet">-->
+<link href="${css}/app.css" rel="stylesheet">
 <link href="${css}/styles.css" rel="stylesheet">
 <link href="${css}/960_16.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -52,12 +56,10 @@
 
 <body>
 
+	<!-- Navigation -->
+	<%@include file="./shared/navbar.jsp"%>
+	<!-- Navigation End -->
 	<div class="wrapper">
-
-		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
-		<!-- Navigation End -->
-
 		<!-- Page Content -->
 		<div class="content">
 			<!-- Loding The Home Contents -->
@@ -69,17 +71,18 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!-- Loding only When User click Feature -->
 			<c:if test="${userClickFeature == true}">
 				<%@include file="feature.jsp"%>
 			</c:if>
-			
+
 			<!-- Loding only When User click View-Products -->
-			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
-			</c:if>	
-			
+			</c:if>
+
 		</div>
 
 		<!-- Footer Start -->

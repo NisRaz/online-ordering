@@ -1,22 +1,36 @@
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card-2">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="${contextRoot}/home" class="navbar-left"><img src="${images}/logo/logo.png" style="max-width:100px; max-width:50px;  margin-top: -1px;"></a>
-    <a href="${contextRoot}/home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="${contextRoot}/show/all/products" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIEW PRODUCTS</a>
-    <a href="${contextRoot}/feature" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEATURE</a>
-    <a href="${contextRoot}/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#" class="navbar-left"><img src="${images}/logo/logo.png" style="max-width:100px; max-width:50px;  margin-top: -1px;"></a>
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large">Home</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large">View Products</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse"
+					data-target="#app-navbar-collapse" class="navbar-toggle collapsed">
+					<span class="sr-only">Toggle Navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="${contextRoot}/home" class="navbar-left"><img src="${images}/logo/logo.png" style="max-width:100px; max-width:50px;  margin-top: -1px;"></a>
+				<a href="http://nepalentrance.com/" class="navbar-brand" style="color:blue"> PRAMOJAN ENTERPRISES </a>
+			</div>
+			<div id="app-navbar-collapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="${contextRoot}/home" >HOME</a></li>
+					<li><a href="${contextRoot}/show/all/products" >VIEW PRODUCTS</a></li>
+					<li><a href="${contextRoot}/feature" >FEATURE</a></li>
+					<li><a href="${contextRoot}/contact" >CONTACT US</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"></a></li>
+					<li><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 </div>
