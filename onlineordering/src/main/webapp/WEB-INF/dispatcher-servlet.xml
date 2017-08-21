@@ -9,7 +9,7 @@
    http://www.springframework.org/schema/mvc 
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<context:component-scan base-package="io.sky.onlineordering.controller"/>
+	<context:component-scan base-package="io.sky.onlineordering"/>
 	<context:component-scan base-package="io.sky.orderingbackend"/>
 
 	<bean id="viewResolver"

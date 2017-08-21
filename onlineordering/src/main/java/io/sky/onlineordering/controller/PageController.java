@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.sky.onlineordering.exception.ProductNotFoundException;
 import io.sky.orderingbackend.dao.CategoryDAO;
 import io.sky.orderingbackend.dao.ProductDAO;
 import io.sky.orderingbackend.dto.Category;
@@ -102,11 +103,13 @@ public class PageController {
 	 * */
 	
 	@RequestMapping(value = "/show/{id}/product") 
-	public ModelAndView showSingleProduct(@PathVariable int id) {
+	public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
 		
 		ModelAndView mv = new ModelAndView("page");
 		
 		Product product = productDAO.get(id);
+		
+		if(product == null) throw new ProductNotFoundException();
 				
 		// update the view count
 		product.setViews(product.getViews() + 1);
