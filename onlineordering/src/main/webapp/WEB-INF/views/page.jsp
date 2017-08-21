@@ -28,6 +28,7 @@
 
 <script type="text/javascript">
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -36,13 +37,18 @@
 <!-- W3-Core CSS -->
 <link href="${css}/w3.css" rel="stylesheet">
 
+<!-- Bootstrap DataTables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
 
 <!-- Custom CSS -->
 <!--link href="${css}/myapp.css" rel="stylesheet">-->
 <link href="${css}/app.css" rel="stylesheet">
+<link href="${css}/app1.css" rel="stylesheet">
 <link href="${css}/styles.css" rel="stylesheet">
 <link href="${css}/960_16.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,14 +60,14 @@
 
 </head>
 
-<body>
+<body >
 
 	<!-- Navigation -->
 	<%@include file="./shared/navbar.jsp"%>
 	<!-- Navigation End -->
 	<div class="wrapper">
 		<!-- Page Content -->
-		<div class="content">
+		<div class="content" style="height: 100%;">
 			<!-- Loding The Home Contents -->
 			<c:if test="${userClickHome == true}">
 				<%@include file="home.jsp"%>
@@ -82,12 +88,14 @@
 				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			
+			<!-- Load only when user clicks show product -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>	
 
 		</div>
 
-		<!-- Footer Start -->
-		<%@include file="./shared/footer.jsp"%>
-		<!-- Footer End -->
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
@@ -95,10 +103,21 @@
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+
 		<!-- Self Coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
 
 	</div>
+
+	<!-- Footer Start -->
+	<%@include file="./shared/footer.jsp"%>
+	<!-- Footer End -->
+
 </body>
 
 </html>

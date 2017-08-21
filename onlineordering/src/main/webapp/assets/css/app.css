@@ -1,12 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600)
 	;
 
- @charset "UTF-8"; /*!
+@charset "UTF-8"; /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 .label, sub, sup {
 	vertical-align: baseline
 }
@@ -16,7 +17,7 @@ hr, img {
 }
 
 body, figure {
-	margin: 0
+	margin: 0 height: 100%
 }
 
 .btn-group>.btn-group, .btn-toolbar .btn, .btn-toolbar .btn-group,
@@ -51,11 +52,28 @@ audio, canvas, progress, video {
 	vertical-align: baseline
 }
 
-audio:not ([controls] ){
-	display: none;
-	height: 0
-}
 
+audio
+:not
+ 
+(
+[
+controls
+]
+ 
+){
+display
+:
+ 
+none
+;
+
+	
+height
+:
+ 
+0
+}
 [hidden], template {
 	display: none
 }
@@ -103,10 +121,20 @@ img {
 	vertical-align: middle
 }
 
-svg:not (:root ){
-	overflow: hidden
-}
+svg
+:not
+ 
+(
+:root
+ 
+){
+overflow
+:
+ 
+hidden
 
+
+}
 hr {
 	box-sizing: content-box;
 	height: 0
@@ -171,7 +199,7 @@ table {
 td, th {
 	padding: 0
 }
-	/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
 	blockquote, img, pre, tr {
 		page-break-inside: avoid
@@ -242,6 +270,7 @@ td, th {
 
 .img-thumbnail, body {
 	background-color: #FAEBD7;
+	height: 100%;
 }
 
 @font-face {
@@ -1312,14 +1341,16 @@ td, th {
 
 html {
 	font-size: 10px;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: transparent;
+	height: 100%
 }
 
 body {
 	font-family: Raleway, sans-serif;
 	font-size: 14px;
 	line-height: 1.6;
-	color: #636b6f
+	color: #636b6f;
+	height: 100%
 }
 
 button, input, select, textarea {
@@ -2906,6 +2937,7 @@ textarea.form-control {
 	position: absolute;
 	margin-left: -20px;
 	margin-top: 4px\9
+
 }
 
 .checkbox+.checkbox, .radio+.radio {
@@ -3701,27 +3733,157 @@ tbody.collapse.in {
 	white-space: nowrap
 }
 
-.btn-group>.btn-group:first-child:not (:last-child )>.btn:last-child,
-	.btn-group>.btn-group:first-child:not (:last-child )>.dropdown-toggle,
-	.btn-group>.btn:first-child:not (:last-child ):not (.dropdown-toggle ){
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0
+.btn-group
+>
+.btn-group
+:first-child
+:not
+ 
+(
+:last-child
+ 
+)>
+.btn
+:last-child
+,
+.btn-group
+>
+.btn-group
+:first-child
+:not
+ 
+(
+:last-child
+ 
+)>
+.dropdown-toggle
+,
+.btn-group
+>
+.btn
+:first-child
+:not
+ 
+(
+:last-child
+ 
+)
+:not
+ 
+(
+.dropdown-toggle
+ 
+){
+border-bottom-right-radius
+:
+ 
+0;
+border-top-right-radius
+:
+ 
+0
 }
+.btn-group
+>
+.btn-group
+:last-child
+:not
+ 
+(
+:first-child
+ 
+)>
+.btn
+:first-child
+,
+.btn-group
+>
+.btn
+:last-child
+:not
+ 
+(
+:first-child
+ 
+),
+.btn-group
+>
+.dropdown-toggle
+:not
 
-.btn-group>.btn-group:last-child:not (:first-child )>.btn:first-child,
-	.btn-group>.btn:last-child:not (:first-child ), .btn-group>.dropdown-toggle:not
-	(:first-child ){
-	border-bottom-left-radius: 0;
-	border-top-left-radius: 0
+	
+(
+:first-child
+ 
+){
+border-bottom-left-radius
+:
+ 
+0;
+border-top-left-radius
+:
+ 
+0
 }
+.btn-group-vertical
+>
+.btn
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+),
+.btn-group
+>
+.btn-group
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+)>
+.btn
+,
+.btn-group
+>
+.btn
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+)
+:not
+ 
+(
+.dropdown-toggle
 
-.btn-group-vertical>.btn:not (:first-child ):not (:last-child ),
-	.btn-group>.btn-group:not (:first-child ):not (:last-child )>.btn,
-	.btn-group>.btn:not (:first-child ):not (:last-child ):not (.dropdown-toggle
-	){
-	border-radius: 0
+	
+){
+border-radius
+:
+ 
+0
 }
-
 .dropdown-menu .divider {
 	height: 1px;
 	margin: 10px 0;
@@ -3912,21 +4074,114 @@ tbody.collapse.in {
 	margin-left: 0
 }
 
-.btn-group-vertical>.btn:first-child:not (:last-child ){
-	border-radius: 4px 4px 0 0
+.btn-group-vertical
+>
+.btn
+:first-child
+:not
+ 
+(
+:last-child
+ 
+){
+border-radius
+:
+ 
+4
+px
+ 
+4
+px
+ 
+0
+0
 }
+.btn-group-vertical
+>
+.btn
+:last-child
+:not
+ 
+(
+:first-child
+ 
+){
+border-radius
+:
+ 
+0
+0
+4
+px
+ 
+4
+px
 
-.btn-group-vertical>.btn:last-child:not (:first-child ){
-	border-radius: 0 0 4px 4px
+
 }
-
-.btn-group-vertical>.btn-group:not (:first-child ):not (:last-child )>.btn,
-	.input-group .form-control:not (:first-child ):not (:last-child ),
-	.input-group-addon:not (:first-child ):not (:last-child ),
-	.input-group-btn:not (:first-child ):not (:last-child ){
-	border-radius: 0
+.btn-group-vertical
+>
+.btn-group
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+)>
+.btn
+,
+.input-group
+ 
+.form-control
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+),
+.input-group-addon
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+),
+.input-group-btn
+:not
+ 
+(
+:first-child
+ 
+)
+:not
+ 
+(
+:last-child
+ 
+){
+border-radius
+:
+ 
+0
 }
-
 .btn-group-vertical>.btn-group:first-child:not (:last-child )>.btn:last-child,
 	.btn-group-vertical>.btn-group:first-child:not (:last-child )>.dropdown-toggle
 	{
@@ -4037,15 +4292,70 @@ tbody.collapse.in {
 	margin-top: 0
 }
 
-.input-group .form-control:first-child, .input-group-addon:first-child,
-	.input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn,
-	.input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not
-	(:last-child )>.btn, .input-group-btn:last-child>.btn:not (:last-child
-	):not (.dropdown-toggle ){
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0
-}
+.input-group
+ 
+.form-control
+:first-child
+,
+.input-group-addon
+:first-child
+,
+.input-group-btn
+:first-child
+>
+.btn
+,
+.input-group-btn
+:first-child
+>
+.btn-group
+>
+.btn
+,
+.input-group-btn
+:first-child
+>
+.dropdown-toggle
+,
+.input-group-btn
+:last-child
+>
+.btn-group
+:not
 
+	
+(
+:last-child
+ 
+)>
+.btn
+,
+.input-group-btn
+:last-child
+>
+.btn
+:not
+ 
+(
+:last-child
+
+	
+)
+:not
+ 
+(
+.dropdown-toggle
+ 
+){
+border-bottom-right-radius
+:
+ 
+0;
+border-top-right-radius
+:
+ 
+0
+}
 .input-group-addon:first-child {
 	border-right: 0
 }
@@ -6900,4 +7210,3 @@ button.close {
 		display: none !important
 	}
 }
-

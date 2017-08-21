@@ -4,15 +4,23 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import io.sky.orderingbackend.dao.ProductDAO;
 import io.sky.orderingbackend.dto.Product;
 
+@Repository("productDAO")
+@Transactional
 public class ProductDAOImpl implements ProductDAO {
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
-
+	
+	/*
+	 * SINGLE
+	 * */
+	
 	@Override
 	public Product get(int productId) {
 		try {			
@@ -21,11 +29,15 @@ public class ProductDAOImpl implements ProductDAO {
 						.get(Product.class,Integer.valueOf(productId));			
 		}
 		catch(Exception ex) {		
-			ex.printStackTrace();
+			ex.printStackTrace();			
 		}
 		return null;
 	}
 
+	/*
+	 * LIST
+	 * */
+	
 	@Override
 	public List<Product> list() {
 		return sessionFactory
@@ -34,6 +46,9 @@ public class ProductDAOImpl implements ProductDAO {
 						.getResultList();
 	}
 
+	/*
+	 * INSERT
+	 * */
 	@Override
 	public boolean add(Product product) {
 		try {			
@@ -48,6 +63,9 @@ public class ProductDAOImpl implements ProductDAO {
 		return false;
 	}
 
+	/*
+	 * UPDATE
+	 * */
 	@Override
 	public boolean update(Product product) {
 		try {			
@@ -62,6 +80,10 @@ public class ProductDAOImpl implements ProductDAO {
 		return false;		
 	}
 
+	
+	/*
+	 * DELETE
+	 * */
 	@Override
 	public boolean delete(Product product) {
 		try {
@@ -78,20 +100,34 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public List<Product> listActiveProducts() {
-		// TODO Auto-generated method stub
-		return null;
+		String selectActiveProducts = "FROM Product WHERE active = :active";
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery(selectActiveProducts, Product.class)
+						.setParameter("active", true)
+							.getResultList();
 	}
 
 	@Override
 	public List<Product> listActiveProductsByCategory(int categoryId) {
-		// TODO Auto-generated method stub
-		return null;
+		String selectActiveProductsByCategory = "FROM Product WHERE active = :active AND categoryId = :categoryId";
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery(selectActiveProductsByCategory, Product.class)
+						.setParameter("active", true)
+						.setParameter("categoryId",categoryId)
+							.getResultList();
 	}
 
 	@Override
 	public List<Product> getLatestActiveProducts(int count) {
-		// TODO Auto-generated method stub
-		return null;
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
+						.setParameter("active", true)
+							.setFirstResult(0)
+							.setMaxResults(count)
+								.getResultList();					
 	}
 
 }

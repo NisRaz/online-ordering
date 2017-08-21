@@ -23,7 +23,6 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String code;
-
 	@NotBlank(message = "Please enter the Product Name!")
 	private String name;
 	@NotBlank(message = "Please enter the Brand Name!")

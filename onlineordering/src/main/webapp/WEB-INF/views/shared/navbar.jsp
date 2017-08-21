@@ -9,7 +9,7 @@
 						class="icon-bar"></span>
 				</button>
 				<a href="${contextRoot}/home" class="navbar-left"><img src="${images}/logo/logo.png" style="max-width:100px; max-width:50px;  margin-top: -1px;"></a>
-				<a href="http://nepalentrance.com/" class="navbar-brand" style="color:blue"> PRAMOJAN ENTERPRISES </a>
+				<a href="${contextRoot}/index" class="navbar-brand" style="color:blue"> PRAMOJAN ENTERPRISES </a>
 			</div>
 			<div id="app-navbar-collapse" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -19,18 +19,9 @@
 					<li><a href="${contextRoot}/contact" >CONTACT US</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"></a></li>
-					<li><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"></a></li>
+					<li><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"><span style="color:pink;">LogIn</span></a></li>
+					<li><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"><span style="color:#00FF00;">Register</span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
