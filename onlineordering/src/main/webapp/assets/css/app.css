@@ -5142,7 +5142,7 @@ border-top-right-radius
 }
 
 .breadcrumb>li+li:before {
-	content: "/ ";
+	content: "/";
 	padding: 0 5px;
 	color: #ccc
 }
