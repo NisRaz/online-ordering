@@ -15,7 +15,7 @@
 <html lang="en">
 
 <head>
-
+<link rel="icon" href="${images}/logo/logo.png" type="image/jpg" size="30x40">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -44,6 +44,7 @@
 <!-- Custom CSS -->
 <!--link href="${css}/myapp.css" rel="stylesheet">-->
 <link href="${css}/app.css" rel="stylesheet">
+<link href="${css}/sidenav.css" rel="stylesheet">
 <link href="${css}/app1.css" rel="stylesheet">
 <link href="${css}/styles.css" rel="stylesheet">
 <link href="${css}/960_16.css" rel="stylesheet">
@@ -116,6 +117,7 @@
 
 		<!-- Self Coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
+		<script src="${js}/sidenav.js"></script>
 
 	</div>
 
