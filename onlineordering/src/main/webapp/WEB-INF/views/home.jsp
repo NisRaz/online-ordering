@@ -21,16 +21,16 @@
 						</ol>
 						<div class="carousel-inner">
 							<div class="item active">
-								<img class="slide-image" src="http://placehold.it/800x300"
-									alt="">
+								<img class="slide-image" src="${images}/slideimg/crame04.jpg"
+									alt="" style="width:900px;height:300px;">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="http://placehold.it/800x300"
-									alt="">
+								<img class="slide-image" src="${images}/slideimg/cream03.jpg"
+									alt="" style="width:900px;height:300px;">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="http://placehold.it/800x300"
-									alt="">
+								<img class="slide-image" src="${images}/slideimg/cream05.jpg"
+									alt="" style="width:900px;height:300px;">
 							</div>
 						</div>
 						<a class="left carousel-control" href="#carousel-example-generic"
