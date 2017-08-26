@@ -7,7 +7,7 @@ import io.sky.orderingbackend.dto.Product;
 public interface ProductDAO {
 
 	Product get(int productId);
-	List<Product> list();	
+	public List<Product> list();	
 	boolean add(Product product);
 	boolean update(Product product);
 	boolean delete(Product product);

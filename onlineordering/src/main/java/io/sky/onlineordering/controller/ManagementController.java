@@ -143,5 +143,12 @@ public class ManagementController {
 	public Category getCategory() {
 		return new Category();
 	}
+	 
+	// returning products  for all the request mapping
+		@ModelAttribute("products")
+		public List<Product> getProducts() {
+			return productDAO.list();
+		}
+	
 	
 }

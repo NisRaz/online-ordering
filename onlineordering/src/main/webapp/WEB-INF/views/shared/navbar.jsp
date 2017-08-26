@@ -16,12 +16,11 @@
 					<li><a href="${contextRoot}/home" >HOME</a></li>
 					<li><a href="${contextRoot}/show/all/products" >VIEW PRODUCTS</a></li>
 					<li><a href="${contextRoot}/manage/products" >MANAGE PRODUCTS</a></li>
-					<li><a href="${contextRoot}/feature" >FEATURE</a></li>
 					<li><a href="${contextRoot}/contact" >CONTACT US</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"><span style="color:pink;">LogIn</span></a></li>
-					<li><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"><span style="color:#00FF00;">Register</span></a></li>
+					<li id="login"><a href="${contextRoot}/login" class="fa fa-sign-in fa-lg navbar-brand" aria-hidden="true"><span style="color:pink;">LogIn</span></a></li>
+					<li id="register"><a href="${contextRoot}/register" class="fa fa-user-plus fa-lg navbar-brand" aria-hidden="true"><span style="color:#00FF00;">Register</span></a></li>
 				</ul>
 			</div>
 		</div>
